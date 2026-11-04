@@ -38,6 +38,11 @@ body[data-theme="light"] {
   --snake-head: #0969da; --snake-body: #1a7f37; --snake-glow: rgba(26, 127, 55, 0.35);
   --matrix-green: #1a7f37; --canvas-bg: #ffffff; --game-accent: #1a7f37;
 }
+body[data-theme="sand"] {
+  --cell-empty: #efe5d6; --cell-l1: #e7c9a5; --cell-l2: #d69a64; --cell-l3: #b8642f; --cell-l4: #7f3712;
+  --snake-head: #4a1f08; --snake-body: #b8642f; --snake-glow: rgba(184, 100, 47, 0.3);
+  --matrix-green: #b8642f; --canvas-bg: #fbf6ee; --game-accent: #b8642f;
+}
 body[data-theme="cyberpunk"] {
   --cell-empty: #170d2b; --cell-l1: #3b1059; --cell-l2: #72128a; --cell-l3: #c01ec7; --cell-l4: #ff007f;
   --snake-head: #00ffff; --snake-body: #ff007f; --snake-glow: rgba(255, 0, 127, 0.85);
@@ -52,6 +57,12 @@ body[data-theme="amber_terminal"] {
   --cell-empty: #241806; --cell-l1: #4a3006; --cell-l2: #855304; --cell-l3: #d98200; --cell-l4: #ffaa00;
   --snake-head: #ffffff; --snake-body: #ffaa00; --snake-glow: rgba(255, 170, 0, 0.85);
   --matrix-green: #ffaa00; --canvas-bg: #0f0a02; --game-accent: #d98200;
+}
+
+body[data-theme="ruby"] {
+  --cell-empty: #26090c; --cell-l1: #4f0f16; --cell-l2: #8a1521; --cell-l3: #d11f31; --cell-l4: #ff3b47;
+  --snake-head: #ffffff; --snake-body: #ff3b47; --snake-glow: rgba(255, 59, 71, 0.85);
+  --matrix-green: #ff3b47; --canvas-bg: #0f0506; --game-accent: #d11f31;
 }
 
 /* --- Cabecera --- */

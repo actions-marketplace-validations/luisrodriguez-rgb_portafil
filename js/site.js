@@ -57,9 +57,9 @@
       'msg.notFound': (u) => `No encontramos a @${u} en GitHub.`,
       'msg.org': (u) => `@${u} es una organización: Portafil funciona con cuentas personales.`,
       'msg.down': 'GitHub no responde ahora mismo. Inténtalo en un momento.',
-      'piece.add': 'Añadir al README', 'piece.copy': 'Copiar código', 'piece.copied': 'Copiado', 'piece.open': 'Abrir SVG',
+      'piece.png': 'PNG para redes', 'piece.add': 'Añadir al README', 'piece.copy': 'Copiar código', 'piece.copied': 'Copiado', 'piece.open': 'Abrir SVG',
       'tab.profile': 'Perfil', 'tab.games': 'Juegos', 'tab.pair': 'Frente a otro', 'tab.share': 'Compartir', 'tabs.label': 'Grupos de piezas',
-      'g.profile': 'Tu perfil', 'g.profileP': 'Las piezas básicas. La cabecera va a lo ancho y el resto de dos en dos. Los datos se actualizan cada hora y los días se cuentan en UTC, como en la API de GitHub.',
+      'g.profile': 'Tu perfil', 'g.profileP': 'Las piezas básicas. La cabecera va a lo ancho y el resto de dos en dos. Los datos se actualizan solos a lo largo del día (como mucho, unas 2 h de retraso) y los días se cuentan en UTC, como en la API de GitHub.',
       'g.games': 'Juegos', 'g.gamesP': 'Tu gráfico de contribuciones convertido en partida, animada en un SVG. La serpiente duerme si llevas una semana sin contribuir y presume de tu racha si pasa de 7 días. Todos se pueden jugar en el estudio.',
       'g.pair': 'Frente a otro perfil', 'g.pairP': 'Compárate con alguien o rétalo a un duelo. El duelo enlaza a una página para compartir.',
       'g.share': 'Para compartir fuera de GitHub', 'g.shareP': 'Tu tarjeta de 1200×630 para LinkedIn, X o WhatsApp, con el estilo que elegiste. El enlace muestra la tarjeta al compartirlo y lleva a tus piezas.',
@@ -76,13 +76,15 @@
       'res.fixed': (name) => `${name} es un tema de color: se ve igual en el modo claro y en el oscuro. La casilla afecta a las piezas con Tinta, Papel, Fósforo o GitHub claro.`,
       morph: { matrix_viper: 'Víbora', capsule: 'Cápsula', retro: 'Retro' },
       speed: { normal: 'Normal', fast: 'Rápida', relaxed: 'Tranquila' },
-      themes: { ink: 'Tinta', paper: 'Papel', dark: 'Fósforo', light: 'GitHub claro', cyberpunk: 'Cyberpunk', neon_cyan: 'Cian', amber_terminal: 'Ámbar' },
+      themes: { ink: 'Tinta', paper: 'Papel', dark: 'Fósforo', light: 'GitHub claro', cyberpunk: 'Cyberpunk', neon_cyan: 'Cian', amber_terminal: 'Ámbar', ruby: 'Rubí', sand: 'Arena' },
       pieces: {
         header: ['Cabecera', 'Avatar, nombre, bio y cifras (repos propios, sin forks)'],
         stats: ['Estadísticas', 'Contribuciones, commits, PRs, issues, reviews'],
         streak: ['Racha', 'Actual, más larga y últimos 30 días'],
         langs: ['Lenguajes', 'Por tamaño de código, sin forks'],
         activity: ['Actividad', 'Contribuciones por semana'],
+        fingerprint: ['Tu huella', 'Tu año en un círculo, distinto para cada perfil'],
+        year: ['Tu año', 'Tu resumen del año: mejores momentos, tu estilo y la comparación con el anterior'],
         kit: ['Todo en una imagen', 'Las cinco piezas en un solo SVG'],
         snake: ['Serpiente', 'Se come tu año de commits'],
         life: ['Juego de la vida', 'Tus contribuciones evolucionan con las reglas de Conway'],
@@ -141,9 +143,9 @@
       'msg.down': 'GitHub is not answering right now. Try again in a moment.',
       'piece.theme': 'Style', 'piece.themeAll': 'Same as the rest',
       'res.fixed': (name) => `${name} is a color theme: it looks the same in light and dark mode. The checkbox applies to pieces in Ink, Paper, Phosphor or GitHub light.`,
-      'piece.add': 'Add to README', 'piece.copy': 'Copy code', 'piece.copied': 'Copied', 'piece.open': 'Open SVG',
+      'piece.png': 'PNG for social', 'piece.add': 'Add to README', 'piece.copy': 'Copy code', 'piece.copied': 'Copied', 'piece.open': 'Open SVG',
       'tab.profile': 'Profile', 'tab.games': 'Games', 'tab.pair': 'Versus', 'tab.share': 'Share', 'tabs.label': 'Piece groups',
-      'g.profile': 'Your profile', 'g.profileP': 'The basics. The header goes full width and the rest two by two. Data refreshes every hour and days are counted in UTC, as in the GitHub API.',
+      'g.profile': 'Your profile', 'g.profileP': 'The basics. The header goes full width and the rest two by two. Data refreshes on its own during the day (at most about 2 h behind) and days are counted in UTC, as in the GitHub API.',
       'g.games': 'Games', 'g.gamesP': 'Your contribution graph turned into a game, animated in an SVG. The snake sleeps after a week without contributions and shows off your streak once it passes 7 days. You can play all of them in the studio.',
       'g.pair': 'Against another profile', 'g.pairP': 'Compare yourself with someone or challenge them to a duel. The duel links to a page to share.',
       'g.share': 'For sharing outside GitHub', 'g.shareP': 'Your 1200×630 card for LinkedIn, X or WhatsApp, in the style you picked. The link shows the card when shared and leads to your pieces.',
@@ -158,13 +160,15 @@
       'snake.morph': 'Shape', 'snake.speed': 'Speed',
       morph: { matrix_viper: 'Viper', capsule: 'Capsule', retro: 'Retro' },
       speed: { normal: 'Normal', fast: 'Fast', relaxed: 'Relaxed' },
-      themes: { ink: 'Ink', paper: 'Paper', dark: 'Phosphor', light: 'GitHub light', cyberpunk: 'Cyberpunk', neon_cyan: 'Cyan', amber_terminal: 'Amber' },
+      themes: { ink: 'Ink', paper: 'Paper', dark: 'Phosphor', light: 'GitHub light', cyberpunk: 'Cyberpunk', neon_cyan: 'Cyan', amber_terminal: 'Amber', ruby: 'Ruby', sand: 'Sand' },
       pieces: {
         header: ['Header', 'Avatar, name, bio and numbers (own repos, no forks)'],
         stats: ['Stats', 'Contributions, commits, PRs, issues, reviews'],
         streak: ['Streak', 'Current, longest and last 30 days'],
         langs: ['Languages', 'By code size, no forks'],
         activity: ['Activity', 'Contributions per week'],
+        fingerprint: ['Your fingerprint', 'Your year as a circle, unique to every profile'],
+        year: ['Your year', 'Your year in review: best moments, your style and how it compares'],
         kit: ['All in one image', 'The five pieces in a single SVG'],
         snake: ['Snake', 'Eats your year of commits'],
         life: ['Game of Life', 'Your contributions evolve with Conway\'s rules'],
@@ -178,7 +182,7 @@
   };
 
   const GROUPS = [
-    { id: 'profile', pieces: ['header', 'stats', 'streak', 'langs', 'activity', 'kit'] },
+    { id: 'profile', pieces: ['header', 'stats', 'streak', 'langs', 'activity', 'fingerprint', 'year', 'kit'] },
     { id: 'games', pieces: ['snake', 'life', 'pacman', 'invaders', 'tetris'] },
     { id: 'pair', pieces: ['versus', 'duel'] }
   ];
@@ -263,8 +267,14 @@
   function showHero(i) {
     heroIndex = (i + THEMES.length) % THEMES.length;
     const imgs = $('heroStage').querySelectorAll('img');
-    // Solo se descargan la visible y la siguiente (cada dashboard pesa ~45 KB con el avatar incrustado)
-    [heroIndex, (heroIndex + 1) % imgs.length].forEach(k => { if (imgs[k] && !imgs[k].src) imgs[k].src = imgs[k].dataset.src; });
+    // Se descarga la visible y, cuando ya ha llegado, la siguiente: la primera no comparte la conexión con nadie
+    // (cada dashboard pesa ~45 KB con el avatar incrustado y es lo más grande de la portada, el LCP)
+    const load = (img) => { if (img && !img.src) img.src = img.dataset.src; };
+    const current = imgs[heroIndex];
+    const next = imgs[(heroIndex + 1) % imgs.length];
+    load(current);
+    if (current.complete && current.naturalWidth) load(next);
+    else current.addEventListener('load', () => load(next), { once: true });
     imgs.forEach((img, k) => img.classList.toggle('on', k === heroIndex));
     $('heroDots').querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-pressed', String(k === heroIndex)));
     $('heroCaption').textContent = T('hero.caption', Brand.demoUser, T('themes')[THEMES[heroIndex]]);
@@ -328,14 +338,22 @@
   }
 
   // --- Ejemplos: el perfil de demostración en cada estilo ---
+  let examplesObserver = null;
   function buildExamples() {
     const box = $('examplesGrid');
     box.innerHTML = '';
+    // Los ejemplos están más abajo: sus 7 dashboards se piden al acercarse (con loading="lazy" Chrome los pedía
+    // nada más abrir, a la vez que el de la portada, y le quitaban la conexión)
+    const reveal = (img) => { if (!img.src) img.src = img.dataset.src; };
+    if (examplesObserver) examplesObserver.disconnect();
+    const observer = examplesObserver = 'IntersectionObserver' in window
+      ? new IntersectionObserver((entries) => entries.forEach(e => { if (e.isIntersecting) { reveal(e.target); observer.unobserve(e.target); } }), { rootMargin: '400px 0px' })
+      : null;
     for (const theme of THEMES) {
       const card = document.createElement('article');
       card.className = 'example';
       const src = `${previewBase}/api/kit/${Brand.demoUser}.svg?theme=${theme}${state.ui === 'es' ? '&lang=es' : ''}`;
-      card.innerHTML = `<img src="${src}" alt="@${Brand.demoUser} · ${T('themes')[theme]}" loading="lazy" decoding="async" width="797" height="474">
+      card.innerHTML = `<img data-src="${src}" alt="@${Brand.demoUser} · ${T('themes')[theme]}" loading="lazy" decoding="async" width="797" height="474">
         <div class="example-foot"><strong>${T('themes')[theme]}</strong><button type="button" class="btn small">${T('ex.use')}</button></div>`;
       card.querySelector('button').addEventListener('click', () => {
         state.theme = theme;
@@ -352,6 +370,8 @@
         $('user').focus({ preventScroll: true });
       });
       box.appendChild(card);
+      const img = card.querySelector('img');
+      if (observer) observer.observe(img); else reveal(img);
     }
   }
 
@@ -376,7 +396,10 @@
 
   // --- Galería ---
 // Alto de cada pieza (el ancho sale de ThemeTokens): reservar el hueco evita que la página salte al cargar
-  const PIECE_HEIGHT = { header: 120, kit: 474, versus: 278, duel: 442 };
+  // Piezas con versión PNG de 1200×630 para X, LinkedIn o Instagram (/api/og/<pieza>/<usuario>.png)
+  const SOCIAL_PIECES = ['year', 'fingerprint'];
+
+  const PIECE_HEIGHT = { header: 120, kit: 474, fingerprint: 300, year: 340, versus: 278, duel: 442 };
 
   function pieceUrl(kind, base = previewBase) {
     const opts = snippetOptions(base);
@@ -481,12 +504,14 @@
       <div class="preview"></div>
       <div class="piece-foot">
         <label class="check"><input type="checkbox" data-pick${state.picked.has(kind) ? ' checked' : ''}> ${T('piece.add')}</label>
-        <div class="piece-actions"><a target="_blank" rel="noopener noreferrer" data-open>${T('piece.open')}</a>${meta.game ? `<a class="btn small" href="play.html" data-play>${T('piece.play')}</a>` : ''}<button type="button" class="btn small" data-copy>${T('piece.copy')}</button></div>
+        <div class="piece-actions"><a target="_blank" rel="noopener noreferrer" data-open>${T('piece.open')}</a>${SOCIAL_PIECES.includes(kind) ? `<a class="btn small" href="#" data-png>${T('piece.png')}</a>` : ''}${meta.game ? `<a class="btn small" href="play.html" data-play>${T('piece.play')}</a>` : ''}<button type="button" class="btn small" data-copy>${T('piece.copy')}</button></div>
       </div>`;
     card.querySelector('[data-pick]').addEventListener('change', (e) => {
       if (e.target.checked) state.picked.add(kind); else state.picked.delete(kind);
       updateReadme();
     });
+    const pngLink = card.querySelector('[data-png]');
+    if (pngLink) pngLink.addEventListener('click', () => track('share', { kind }));
     card.querySelector('[data-copy]').addEventListener('click', (e) => {
       const code = KitSnippet.piece(kind, state.user, snippetOptions(publicBase));
       if (code) {
@@ -532,6 +557,12 @@
     document.querySelectorAll('.piece').forEach(card => {
       const kind = card.dataset.kind;
       const play = card.querySelector('[data-play]');
+      const png = card.querySelector('[data-png]');
+      if (png) {
+        const theme = state.pieceThemes[kind] || state.theme;
+        png.href = `${previewBase}/api/og/${kind}/${state.user}.png?theme=${theme}${state.ui === 'es' ? '&lang=es' : ''}`;
+        png.setAttribute('download', `portafil-${kind}-${state.user}.png`);
+      }
       if (play) play.href = studioUrl({ game: KitSnippet.PIECES[kind].game });
       const box = card.querySelector('.preview');
       const ready = !KitSnippet.PIECES[kind].pair || state.rival;

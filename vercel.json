@@ -13,6 +13,14 @@
       "destination": "/api/og?kind=duel&slug=:pair&format=svg"
     },
     {
+      "source": "/api/og/:piece(year|fingerprint)/:user.png",
+      "destination": "/api/og?kind=:piece&slug=:user&format=png"
+    },
+    {
+      "source": "/api/og/:piece(year|fingerprint)/:user.svg",
+      "destination": "/api/og?kind=:piece&slug=:user&format=svg"
+    },
+    {
       "source": "/api/og/:user.png",
       "destination": "/api/og?kind=profile&slug=:user&format=png"
     },
@@ -33,8 +41,12 @@
       "destination": "/api/duel?pair=:pair&format=versus"
     },
     {
-      "source": "/api/:kind(header|stats|streak|langs|activity|kit)/:user.svg",
+      "source": "/api/:kind(header|stats|streak|langs|activity|kit|fingerprint|year)/:user.svg",
       "destination": "/api/card?kind=:kind&user=:user"
+    },
+    {
+      "source": "/api/year/:user.json",
+      "destination": "/api/calendar?user=:user&scope=year"
     },
     {
       "source": "/api/calendar/:user.json",

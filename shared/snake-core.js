@@ -5,7 +5,7 @@
  */
 
 // Temas del contrato: los mismos para la serpiente, los juegos y las tarjetas
-const CONTRACT_THEMES = ['ink', 'paper', 'dark', 'light', 'cyberpunk', 'neon_cyan', 'amber_terminal'];
+const CONTRACT_THEMES = ['ink', 'paper', 'dark', 'light', 'cyberpunk', 'neon_cyan', 'amber_terminal', 'ruby', 'sand'];
 
 const SnakeCore = {
   LEVELS: { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 },
@@ -26,7 +26,7 @@ const SnakeCore = {
   },
 
   // Tarjetas del kit (/api/<pieza>/<usuario>.svg): solo tema e idioma, para que todas combinen
-  CARD_KINDS: ['header', 'stats', 'streak', 'langs', 'activity', 'kit'],
+  CARD_KINDS: ['header', 'stats', 'streak', 'langs', 'activity', 'kit', 'fingerprint', 'year'],
   CARD_OPTION_VALUES: {
     theme: CONTRACT_THEMES,
     lang: ['en', 'es']
@@ -96,10 +96,10 @@ const SnakeCore = {
   },
 
   /**
-   * Ejecuta una consulta GraphQL con raíz user(login: $login) y devuelve data.user.
+   * Ejecuta una consulta GraphQL con raíz user(login: $login) y devuelve data.user. variables: las demás (fechas...).
    * Errores: .status con el código HTTP, .code = 'NOT_FOUND' si el usuario no existe.
    */
-  async queryUser(query, username, token, fetchImpl = fetch) {
+  async queryUser(query, username, token, fetchImpl = fetch, variables = {}) {
     const res = await fetchImpl('https://api.github.com/graphql', {
       method: 'POST',
       headers: {
@@ -107,7 +107,7 @@ const SnakeCore = {
         'Content-Type': 'application/json',
         'User-Agent': Brand.userAgent
       },
-      body: JSON.stringify({ query, variables: { login: username } })
+      body: JSON.stringify({ query, variables: { ...variables, login: username } })
     });
     if (!res.ok) {
       const httpError = new Error(`GitHub GraphQL respondió ${res.status} ${res.statusText}`);
